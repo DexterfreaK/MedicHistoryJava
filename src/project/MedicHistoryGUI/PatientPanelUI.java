@@ -488,7 +488,7 @@ public class PatientPanelUI extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addComponent(CreateAppointmentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         welcomePatientName.setFont(new java.awt.Font("Helvetica Neue", 1, 33)); // NOI18N
@@ -719,6 +719,11 @@ public class PatientPanelUI extends javax.swing.JFrame {
         jButton7.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setText("Timeline View");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton8.setBackground(new java.awt.Color(102, 102, 255));
         jButton8.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
@@ -876,7 +881,7 @@ public class PatientPanelUI extends javax.swing.JFrame {
                 .addGap(22, 22, 22))
         );
 
-        setBounds(0, 0, 1500, 594);
+        setBounds(0, 0, 1500, 590);
     }// </editor-fold>//GEN-END:initComponents
     private static final Logger LOG = Logger.getLogger(PatientPanelUI.class.getName());
 
@@ -968,6 +973,18 @@ public class PatientPanelUI extends javax.swing.JFrame {
 
         AppointmentDialog.setVisible(true);
     }//GEN-LAST:event_CreateAppointmentButtonActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        
+        DoctorRecieptUI dpanel;
+        dpanel = new DoctorRecieptUI();
+        
+        dpanel.setVisible(true);
+
+        // Dispose or hide the login GUI
+        this.dispose(); // or this.setVisible(false);
+        
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
