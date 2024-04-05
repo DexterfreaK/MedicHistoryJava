@@ -21,9 +21,39 @@ public class Docpatientlist extends javax.swing.JFrame {
         initComponents();
         uniqueid.setText("UniqueID:-"+this.docID);
         docname.setText(this.docID);
+        dynamiccell();
+        dynamiccell();
     }
     
 //    welcomeDoctorName.setText(this.name+"👋");
+    private void dynamiccell()
+    {
+        javax.swing.JPanel cell;
+        cell = new javax.swing.JPanel();
+        cell.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        javax.swing.JLabel celltxt;
+        celltxt=new javax.swing.JLabel();
+        celltxt.setText("HELLLO");
+
+        javax.swing.GroupLayout cellLayout = new javax.swing.GroupLayout(cell);
+        cell.setLayout(cellLayout);
+        cellLayout.setHorizontalGroup(
+            cellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cellLayout.createSequentialGroup()
+                .addGap(205, 205, 205)
+                .addComponent(celltxt, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(208, Short.MAX_VALUE))
+        );
+        cellLayout.setVerticalGroup(
+            cellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cellLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(celltxt)
+                .addContainerGap(59, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(cell);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -42,13 +72,8 @@ public class Docpatientlist extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         patientlist = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        patientNameField = new javax.swing.JLabel();
-        patientAddressField = new javax.swing.JLabel();
-        lastVisited = new javax.swing.JLabel();
-        patientPhoneNo = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         uniqueid = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -138,61 +163,10 @@ public class Docpatientlist extends javax.swing.JFrame {
         patientlist.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         patientlist.setText("Current Patient List");
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        patientNameField.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        patientNameField.setText("Patient Name");
-
-        patientAddressField.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        patientAddressField.setText("Patient Address");
-
-        lastVisited.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        lastVisited.setText("Last Visited:Date");
-
-        patientPhoneNo.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        patientPhoneNo.setText("Phone No");
-
-        jButton1.setBackground(new java.awt.Color(242, 242, 242));
-        jButton1.setForeground(new java.awt.Color(255, 51, 51));
-        jButton1.setText("Delete");
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lastVisited)
-                            .addComponent(patientAddressField)
-                            .addComponent(patientNameField))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(patientPhoneNo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                        .addComponent(jButton1)
-                        .addGap(23, 23, 23))))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(patientNameField)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(patientAddressField)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lastVisited)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(patientPhoneNo)
-                    .addComponent(jButton1))
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
-
         uniqueid.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         uniqueid.setText("Unique User ID:DoctorID");
+
+        jPanel1.setLayout(new java.awt.GridLayout(3, 3, 20, 20));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -203,13 +177,13 @@ public class Docpatientlist extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(patientlist)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(232, 232, 232)
-                        .addComponent(uniqueid)
-                        .addContainerGap(12, Short.MAX_VALUE))))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(patientlist)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(426, 426, 426)
+                                .addComponent(uniqueid)))
+                        .addContainerGap())
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -219,9 +193,9 @@ public class Docpatientlist extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(uniqueid)
                     .addComponent(patientlist, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(448, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -293,19 +267,14 @@ public class Docpatientlist extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel docname;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JLabel lastVisited;
-    private javax.swing.JLabel patientAddressField;
-    private javax.swing.JLabel patientNameField;
-    private javax.swing.JLabel patientPhoneNo;
     private javax.swing.JLabel patientlist;
     private javax.swing.JLabel uniqueid;
     // End of variables declaration//GEN-END:variables
