@@ -203,7 +203,7 @@ String email = usernameField.getText();
 
             rs.close();
             pstmt.close();
-        } catch (SQLException ex) {
+        } catch(SQLException ex) {
         }
 
     }//GEN-LAST:event_LoginPatientActionPerformed
